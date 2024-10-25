@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/CSS/style1.css" />
+    <title>GameVerse - Tu mundo de juegos</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel" src="js/scripts.js"></script>
+    <script type="text/babel" src="js/script.card.js"></script>
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            cardsData: [],
+          };
+        }
+
+        componentDidMount() {
+          fetch("js/data.fotos.json")
+            .then((response) => response.json())
+            .then((data) => {
+              this.setState({ cardsData: data });
+            })
+            .catch((error) => console.error("hay un error", error));
+        }
+
+        render() {
+          return (
+            <div>
+              <Header />
+              <MainContent />
+              <FotosList cardsData={this.state.cardsData} />
+              <ProductButton />
+              <Footer />
+            </div>
+          );
+        }
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

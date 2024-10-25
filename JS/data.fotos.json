@@ -1,0 +1,20 @@
+[
+  {
+    "foto": "../FOTITOS/PS5.jpeg",
+    "clase": "ps5",
+    "alt": "playStation5",
+    "texto": "PlayStation5"
+  },
+  {
+    "foto": "../FOTITOS/xbox.png",
+    "clase": "xbox",
+    "alt": "Xbox",
+    "texto": "Xbox Series x"
+  },
+  {
+    "foto": "../FOTITOS/switch.png",
+    "clase": "switch",
+    "alt": "Nintendo Switch",
+    "texto": "Nintendo Switch OLED"
+  }
+]
