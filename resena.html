@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reseñas de Productos</title>
+    <link rel="stylesheet" href="CSS/resena.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Reseñas de Productos</h1>
+    </header>
+
+    <div class="container">
+      <section id="reviews" class="reviews"></section>
+      <h2>Agregar Reseña</h2>
+      <form id="reviewForm">
+        <input
+          type="text"
+          id="productName"
+          placeholder="Nombre del Producto"
+          required
+        />
+        <textarea
+          id="reviewText"
+          rows="4"
+          placeholder="Escribe tu reseña aquí..."
+          required
+        ></textarea>
+        <input type="submit" value="Enviar Reseña" />
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; Reseñas de Productos</p>
+    </footer>
+
+    <script src="JS/resena.js"></script>
+  </body>
+</html>

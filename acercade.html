@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/style3.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GameVerse - Tu mundo de juegos</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div id="root" class="flex-grow"></div>
+    <script type="text/babel" src="JS/scripts.js"></script>
+    <script type="text/babel">
+      const App = () => (
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <div class="background">
+            <div class="description-container">
+              <h1 class="welcome-title">
+                Bienvenidos a <span class="highlight">GameVerse</span>
+              </h1>
+              <h2>Todo Relacionado con el Gaming</h2>
+              <p>
+                Saludos a todos los entusiastas del gaming. Desde videojuegos
+                clásicos hasta las últimas innovaciones en consolas y
+                componentes, GameVerse se ha convertido en un referente para
+                todos los amantes de esta apasionante industria. Nuestro
+                objetivo es ofrecer productos de alta calidad que eleven tu
+                experiencia de juego y conecten con tu pasión por el
+                entretenimiento.
+              </p>
+
+              <h2>Explora Nuestro Universo</h2>
+              <p>
+                GameVerse es el destino ideal para encontrar todo lo que
+                necesitas para mejorar y personalizar tu espacio gamer. Desde
+                consolas y videojuegos hasta accesorios de última generación y
+                componentes de PC de alto rendimiento, cada producto ha sido
+                seleccionado con un enfoque en la calidad y el rendimiento.
+              </p>
+
+              <h2>Compra Fácil y con Seguridad</h2>
+              <p>
+                Disfruta de una experiencia de compra segura y confiable.
+                Realizamos envíos rápidos y gratuitos a nivel global y aceptamos
+                los métodos de pago más seguros, incluyendo PayPal y tarjetas de
+                crédito/débito como Visa, Mastercard y American Express.
+                ¡Sumérgete en el mundo del gaming con GameVerse y lleva tu
+                experiencia de juego al siguiente nivel!
+              </p>
+            </div>
+          </div>
+          <section>
+            <h2 class="ubicacion-titulo">Ubícanos aquí</h2>
+
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.641385019639!2d-76.94702592419856!3d-12.068177088170337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e8f7450dd3%3A0xea6279cb4df6cbf1!2sMadre%20De%20Dios%20371%2C%20La%20Molina%2015024!5e0!3m2!1ses-419!2spe!4v1730497082053!5m2!1ses-419!2spe"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Gaming Universe"
+              ></iframe>
+            </div>
+          </section>
+          <Footer />
+        </div>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

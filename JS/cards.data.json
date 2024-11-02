@@ -1,0 +1,20 @@
+[
+  {
+    "foto": "https://firebasestorage.googleapis.com/v0/b/imagenes-del-final.appspot.com/o/IMAGENES%20PRINCIPALES%2FPS5.jpeg?alt=media&token=248092d2-c5bd-48a2-a56f-275f1285b0a7",
+    "clase": "ps5",
+    "alt": "playStation5",
+    "texto": "PlayStation5"
+  },
+  {
+    "foto": "https://firebasestorage.googleapis.com/v0/b/imagenes-del-final.appspot.com/o/IMAGENES%20PRINCIPALES%2Fxbox.png?alt=media&token=be2e135f-679b-4374-b5b0-9c422cea0b96",
+    "clase": "xbox",
+    "alt": "Xbox",
+    "texto": "Xbox Series x"
+  },
+  {
+    "foto": "https://firebasestorage.googleapis.com/v0/b/imagenes-del-final.appspot.com/o/IMAGENES%20PRINCIPALES%2Fswitch.png?alt=media&token=4842f586-62ea-419a-959e-4d14b3df7b31",
+    "clase": "switch",
+    "alt": "Nintendo Switch",
+    "texto": "Nintendo Switch OLED"
+  }
+]

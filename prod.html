@@ -21,37 +21,28 @@
   </head>
   <body class="min-h-screen flex flex-col">
     <div id="root" class="flex-grow"></div>
+    <script type="text/babel" src="JS/prod.js"></script>
     <script type="text/babel" src="JS/scripts.js"></script>
-    <script type="text/babel" src="JS/card.js"></script>
+    <script type="text/babel" src="JS/popup.js"></script>
     <script type="text/babel">
-      class App extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-            cardsData: [],
-          };
-        }
-
-        componentDidMount() {
-          fetch("JS/cards.data.json")
-            .then((response) => response.json())
-            .then((data) => {
-              this.setState({ cardsData: data });
-            })
-            .catch((error) => console.error("hay un error", error));
-        }
-        render() {
-          return (
-            <div className="flex flex-col min-h-screen">
-              <Header />
-              <MainContent />
-              <FotosList cardsData={this.state.cardsData} />
-              <Button />
-              <Footer />
-            </div>
-          );
-        }
-      }
+      const App = () => (
+        <div className="flex flex-col min-h-screen">
+          <Header2 />
+          <section id="game-list">
+            {gamesData.map((game) => (
+              <Prod
+                key={game.id}
+                category={game.category}
+                title={game.title}
+                description={game.description}
+                image={game.image}
+                id={game.id}
+              />
+            ))}
+          </section>
+          <Footer />
+        </div>
+      );
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(<App />);
     </script>

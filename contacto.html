@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/CSS/stylescontact.css" />
+    <link rel="stylesheet" href="CSS/stylescontact.css" />
     <title>GameVerse - Tu mundo de juegos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -18,15 +19,19 @@
       src="https://unpkg.com/@babel/standalone/babel.min.js"
     ></script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel" src="js/scripts.js"></script>
+  <body class="min-h-screen flex flex-col">
+    <div id="root" class="flex-grow"></div>
+    <script type="text/babel" src="JS/scripts.js"></script>
     <script type="text/babel">
-      const App = () => (
-        <div>
-          <Form />
-        </div>
-      );
+      const App = () => {
+        return (
+          <div className="flex flex-col min-h-screen">
+            <div class="m-16 ..."></div>
+            <Form />
+            <div className="flex-grow"></div>
+          </div>
+        );
+      };
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(<App />);
     </script>
